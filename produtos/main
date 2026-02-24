@@ -1,0 +1,16 @@
+'use stric'
+
+function adicionarProduto() {
+    const list = document.getElementById('lista')
+    const produto = document.getElementById('produto')
+
+    if (produto.value.trim() === "") return
+
+    const item = document.createElement('div')
+    item.textContent = produto.value
+    item.className = "bg-gray-200 p-2 rounded"
+
+    list.appendChild(item)
+
+    produto.value = ""
+}
